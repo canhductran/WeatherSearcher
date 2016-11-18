@@ -24915,11 +24915,14 @@
 	    null,
 	    React.createElement(Nav, null),
 	    React.createElement(
-	      'h2',
-	      null,
-	      'Main component'
-	    ),
-	    props.children
+	      'div',
+	      { className: 'row' },
+	      React.createElement(
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        props.children
+	      )
+	    )
 	  );
 	};
 
@@ -25079,7 +25082,7 @@
 	      React.createElement(
 	        'h3',
 	        null,
-	        'Weather Component'
+	        'Get your weather!'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      renderMessage()
@@ -25118,11 +25121,7 @@
 	        'form',
 	        { onSubmit: this.onFormSubmit },
 	        React.createElement('input', { type: 'text', ref: 'location' }),
-	        React.createElement(
-	          'button',
-	          null,
-	          'Get Weather'
-	        )
+	        React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
 	      )
 	    );
 	  }
@@ -26696,6 +26695,9 @@
 
 	var React = __webpack_require__(8);
 
+	var _require = __webpack_require__(166),
+	    Link = _require.Link;
+
 	var Examples = React.createClass({
 	  displayName: 'Examples',
 
@@ -26705,13 +26707,35 @@
 	      null,
 	      React.createElement(
 	        'h3',
-	        null,
+	        { className: 'text-center' },
 	        'Examples'
 	      ),
 	      React.createElement(
 	        'p',
 	        null,
-	        'Welcome to Examples page'
+	        'Here are some examples'
+	      ),
+	      React.createElement(
+	        'ol',
+	        null,
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/?location=Melbourne' },
+	            'Melbourne, Australia'
+	          )
+	        ),
+	        React.createElement(
+	          'li',
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: '/?location=Sydney' },
+	            'Sydney, Australia'
+	          )
+	        )
 	      )
 	    );
 	  }
