@@ -25068,7 +25068,7 @@
 	      if (isLoading) {
 	        return React.createElement(
 	          'h3',
-	          null,
+	          { className: 'text-center' },
 	          'Fetching weather...'
 	        );
 	      } else if (temp && location) {
@@ -25081,8 +25081,8 @@
 	      null,
 	      React.createElement(
 	        'h3',
-	        null,
-	        'Get your weather!'
+	        { className: 'text-center' },
+	        'Get Weather'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      renderMessage()
@@ -25121,7 +25121,7 @@
 	        'form',
 	        { onSubmit: this.onFormSubmit },
 	        React.createElement('input', { type: 'text', ref: 'location' }),
-	        React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
+	        React.createElement('input', { type: 'submit', className: 'button expanded hollow', value: 'Get Weather' })
 	      )
 	    );
 	  }
@@ -26680,7 +26680,7 @@
 	    React.createElement(
 	      "p",
 	      null,
-	      "This is a weather application built in React"
+	      "This is a small weather application built in React along with other open source frameworks."
 	    ),
 	    React.createElement(
 	      "p",
