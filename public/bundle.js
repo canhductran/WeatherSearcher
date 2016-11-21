@@ -25048,7 +25048,7 @@
 	module.exports = {
 	  getTemp: function getTemp(location) {
 	    var encodedLocation = encodeURIComponent(location);
-	    var requestUrl = OPEN_WEATHER_MAP_URL + '&q=' + encodedLocation;
+	    var requestUrl = OPEN_WEATHER_MAP_URL + '&q=' + encodedLocation + '&units=metric';
 
 	    return axios.get(requestUrl).then(function (res) {
 	      console.log(res);
@@ -26697,7 +26697,7 @@
 	    null,
 	    'It is ',
 	    props.temp,
-	    ' F degree in ',
+	    ' Celsius degree in ',
 	    props.location
 	  );
 	};
